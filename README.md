@@ -1,4 +1,4 @@
-# 悦音盒 MusicBox 1.5.0
+# 悦音盒 MusicBox
 
 Minecraft Java 版 **1.21.11** 的 NeoForge **21.11.45** 客户端模组：扫描本地音乐，用 GUI 选曲、播放、暂停、切歌、拖动进度和调节音量。
 
