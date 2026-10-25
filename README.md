@@ -239,4 +239,4 @@ musicbox/
 - 模组代码：MIT，见 `LICENSE`。
 - 内置 MP3 解码器 JLayer 1.0.1：LGPL-2.1，未修改，见 `THIRD_PARTY_NOTICES.md`、`LICENSE-JLayer.txt` 和 `third_party/jlayer-1.0.1-sources.jar`。
 
-本项目与腾讯、QQ 音乐、网易云音乐、Mojang、NeoForged 均无关联。
+
