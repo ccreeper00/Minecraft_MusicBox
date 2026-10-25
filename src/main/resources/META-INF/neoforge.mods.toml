@@ -1,0 +1,44 @@
+modLoader="javafml"
+loaderVersion="[3,)"
+license="MIT"
+
+[[mods]]
+modId="musicbox"
+version="1.5.0"
+displayName="悦音盒 MusicBox"
+authors="MusicBox contributors"
+description='''
+一个客户端本地音乐播放器：扫描你合法拥有的 MP3 / OGG / WAV 文件，
+用 GUI 选曲、播放、暂停、切歌、拖动进度和调节音量。
+
+1.5.0：新增音量 +/- 快捷键；离开世界/回到标题界面时停止播放，
+只允许在世界内播放。
+1.4.0：搜索/收藏只过滤显示，播放队列始终为全部歌曲；
+HUD 支持右下角拖拽/滚轮调整大小。
+1.3.1：播放/暂停默认键从 K 改为 Y（避免 Iris 光影冲突）。
+1.3.0：新增游戏内“正在播放”HUD，可在界面里拖动定位；
+新增播放/暂停、上一首、下一首快捷键。
+1.2.1：修复专辑封面只显示左上角/灰块的问题（按完整纹理宽高采样）。
+1.2.0：把图片放进 musicbox/backgrounds/ 即可自动作为背景；
+界面“背景”按钮可循环切换。左侧歌曲栏可拖动调整宽度，
+支持专辑封面（侧边图片、MP3 ID3 APIC、OGG 封面），
+并修复“上一首”变成重播当前曲的问题。
+
+不包含 QQ 音乐账号登录、在线曲库抓取或 DRM 解密功能。
+收藏页读取音乐文件夹内的 favorites.m3u。
+'''
+logoFile="icon.png"
+
+[[dependencies.musicbox]]
+modId="neoforge"
+type="required"
+versionRange="[21.11.45,21.12)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.musicbox]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.11,1.21.12)"
+ordering="NONE"
+side="CLIENT"

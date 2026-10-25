@@ -1,0 +1,57 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.148'
+}
+
+version = '1.5.0'
+group = 'com.musicbox'
+
+base {
+    archivesName = 'musicbox'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    mavenCentral()
+}
+
+neoForge {
+    version = '21.11.45'
+
+    runs {
+        client {
+            client()
+        }
+    }
+
+    mods {
+        musicbox {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+configurations {
+    // JLayer is bundled into the final jar (LGPL-2.1, unmodified).
+    embed
+    implementation.extendsFrom embed
+}
+
+dependencies {
+    embed files('libs/jlayer-1.0.1.jar')
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from({ configurations.embed.collect { it.isDirectory() ? it : zipTree(it) } }) {
+        exclude 'META-INF/MANIFEST.MF'
+        exclude 'META-INF/*.SF'
+        exclude 'META-INF/*.DSA'
+        exclude 'META-INF/*.RSA'
+    }
+}

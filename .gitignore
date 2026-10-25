@@ -1,0 +1,18 @@
+.gradle/
+build/
+run/
+.idea/
+*.iml
+out/
+
+# Local test instances / logs
+test-instance/
+logs/
+*.log
+
+# Keep only the current release jar in dist; publish future jars via GitHub Releases.
+dist/musicbox-*.jar
+!dist/musicbox-1.5.0.jar
+
+Thumbs.db
+.DS_Store

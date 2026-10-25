@@ -1,0 +1,7 @@
+#EXTM3U
+# Put this file in the game instance's "musicbox" folder.
+# Lines are resolved relative to that folder; absolute paths also work.
+#
+# Artist - Song.mp3
+# subfolder/Another Song.ogg
+# D:\Music\Legal Copy\Track.wav
