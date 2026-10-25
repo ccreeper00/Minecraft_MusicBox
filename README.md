@@ -7,6 +7,14 @@ Minecraft Java 版 **1.21.11** 的 NeoForge **21.11.45** 客户端模组：扫�
 - **Minecraft：1.21.11**
 - **NeoForge：21.11.45 及以上、低于 21.12**
 
+## 1.6.0 更新
+- **原生 FLAC 支持**：.flac 会被扫描和播放，使用内置纯 Java 解码器，不需要 ffmpeg。
+- 支持 FLAC 的 STREAMINFO、16/24/32-bit、常见单/双声道、固定/LPC 预测、Rice/Rice2 分区残差；多声道解码取决于系统混音器。
+- 24/32-bit FLAC 在播放时转为 16-bit PCM（Java Sound 输出链路为 16-bit）；16-bit FLAC 为无损直通。
+- 支持 FLAC 的 METADATA_BLOCK_PICTURE 专辑封面。
+
+
+
 ## 1.5.0 更新
 
 - **音量快捷键**：`PageDown` 音量 -，`PageUp` 音量 +，每步 5%；可在按键绑定里改。
